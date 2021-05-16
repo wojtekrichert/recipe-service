@@ -1,6 +1,6 @@
 from fastapi import APIRouter, FastAPI
 
-from core.settings import settings
+from recipes.settings import settings
 
 
 def register_routers(rest_app):
