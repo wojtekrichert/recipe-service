@@ -5,27 +5,18 @@ description = ""
 authors = ["Wojciech Richert <33549959+wojtekrichert@users.noreply.github.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
-typer = "^0.3.2"
-pydantic = "^1.8.2"
-fastapi = "^0.65.1"
-uvicorn = "^0.13.4"
-python-dotenv = "^0.17.1"
+python = "==3.11.5"
+typer = "==0.12.1"
+pydantic = "==2.6.4"
+fastapi = "==0.110.1"
+uvicorn = "==0.29.0"
+python-dotenv = "==1.0.1"
 
 [tool.poetry.dev-dependencies]
-# tests
-pytest = "==6.2.4"
-factory-boy = "==3.2.0"
-# code quality
-black = "^21.5b1"
-isort = "==5.8.0"
-flake8 = "==3.9.2"
-flake8-isort = "==4.0.0"
-pre-commit = "^2.11.1"
 
 [tool.poetry.scripts]
 cli = "recipes.cli:main"
 
 [build-system]
-requires = ["poetry>=1.1.5"]
+requires = ["poetry>=1.8.2"]
 build-backend = "poetry.masonry.api"
