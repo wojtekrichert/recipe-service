@@ -1,7 +1,7 @@
 import typer
 import uvicorn
 
-from recipes.settings import settings
+from recipe.settings import settings
 
 app = typer.Typer()
 
