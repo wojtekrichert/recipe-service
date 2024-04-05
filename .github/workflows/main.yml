@@ -10,9 +10,9 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: 3.11.5
-      - name: Run image
+      - name: Install project
         uses: abatilo/actions-poetry@v2
         with:
           poetry-version: 1.8.2
       - name: View poetry --help
-        run: poetry --help
+        run: poetry version
