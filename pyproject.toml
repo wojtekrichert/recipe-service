@@ -13,7 +13,9 @@ uvicorn = "==0.29.0"
 python-dotenv = "==1.0.1"
 pydantic-settings = "^2.2.1"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev]
+[tool.poetry.group.dev.dependencies]
+ruff = "==0.3.5"
 
 [tool.poetry.scripts]
 cli = "recipes.cli:main"
@@ -21,3 +23,38 @@ cli = "recipes.cli:main"
 [build-system]
 requires = ["poetry>=1.8.2"]
 build-backend = "poetry.masonry.api"
+
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # flake8
+    "RSE", "TCH", "ARG", "LOG",
+    # isort
+    "I",
+    # pydocstyle
+    "D",
+    # pylint
+    "PL",
+    # pep8
+    "N",
+]
+ignore = [
+    "E501", "D400", "D415", "D202", "D212", "D401", "D104", "D205", "D404", "D402", "N805", "D200",
+    "PLR0913", "N818", "PLR2004", "N806", "PLW2901", "D301", "RSE102"
+]
+
+[tool.ruff]
+line-length = 90
+
+[tool.ruff.lint.isort]
+split-on-trailing-comma = true
+section-order = ["future", "standard-library", "third-party", "shared", "first-party", "local-folder"]
+
+[tool.ruff.lint.isort.sections]
+"recipes" = ["recipes"]
+
+

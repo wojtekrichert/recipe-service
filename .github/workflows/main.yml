@@ -14,5 +14,6 @@ jobs:
         uses: abatilo/actions-poetry@v2
         with:
           poetry-version: 1.8.2
-      - name: View poetry --help
-        run: poetry version
+      - name: Tests
+        run: |
+          poetry run ruff recipes/* tests/*
