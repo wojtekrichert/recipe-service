@@ -43,7 +43,7 @@ select = [
     "N",
 ]
 ignore = [
-    "E501", "D400", "D415", "D202", "D212", "D401", "D104", "D205", "D404", "D402", "N805", "D200",
+    "E501", "D400", "D415", "D202", "D203", "D212", "D401", "D104", "D205", "D404", "D402", "N805", "D200",
     "PLR0913", "N818", "PLR2004", "N806", "PLW2901", "D301", "RSE102"
 ]
 
@@ -52,7 +52,7 @@ line-length = 90
 
 [tool.ruff.lint.isort]
 split-on-trailing-comma = true
-section-order = ["future", "standard-library", "third-party", "shared", "first-party", "local-folder"]
+section-order = ["future", "standard-library", "third-party", "recipes", "first-party", "local-folder"]
 
 [tool.ruff.lint.isort.sections]
 "recipes" = ["recipes"]
