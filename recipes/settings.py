@@ -1,10 +1,15 @@
+"""Object representation of settings stored in .env file."""
 from enum import Enum
 
 from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
+    """Object representation of settings stored in .env file."""
+
     class LogLevel(Enum):
+        """Log level available in application."""
+
         DEBUG = "DEBUG"
         INFO = "INFO"
         WARN = "WARN"
@@ -18,6 +23,8 @@ class Settings(BaseSettings):
     LOG_LEVEL: LogLevel
 
     class Config:
+        """General pydantic configuration class."""
+
         env_file = ".env"
         env_file_encoding = "utf-8"
 

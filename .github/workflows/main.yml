@@ -19,4 +19,4 @@ jobs:
           poetry install
       - name: Tests
         run: |
-          poetry run ruff check recipes/* tests/*
+          poetry run ruff check .
