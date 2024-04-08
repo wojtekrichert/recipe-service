@@ -1,3 +1,4 @@
+"""Commandline interface for running FastAPI server."""
 import typer
 import uvicorn
 
@@ -14,10 +15,18 @@ def run_server(
     port: int = typer.Option(8000),
     reload: bool = typer.Option(False),
 ):
+    """
+    Run uvicorn server.
+
+    :param str host: ip address or domain name
+    :param int port: Port to allocate with server
+    :param bool reload: reload server on code change
+    """
     uvicorn.run(settings.APP, host=host, port=port, reload=reload, lifespan="on")
 
 
 def main():
+    """Run server."""
     app()
 
 
