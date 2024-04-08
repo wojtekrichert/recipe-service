@@ -17,9 +17,9 @@ jobs:
       - name: Install project
         run: |
           poetry install
-      - name: Ruff
-        run: |
-          poetry run ruff check .
       - name: Tests
         run: |
           poetry run pytest tests/
+      - name: Ruff
+        run: |
+          poetry run ruff check .
