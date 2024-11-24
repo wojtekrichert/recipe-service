@@ -1,7 +1,8 @@
 """Main file that connects all routes & run server."""
-from fastapi import APIRouter, FastAPI
+from fastapi import FastAPI
 
-from recipes.settings import settings
+from recipe.routers import recipe_router
+from recipe.settings import settings
 
 
 def register_routers(rest_app: FastAPI):
@@ -10,10 +11,9 @@ def register_routers(rest_app: FastAPI):
 
     :param FastAPI rest_app: FastAPI application instance
     """
-    domain_router = APIRouter()
 
     rest_app.include_router(
-        domain_router,
+        recipe_router,
         prefix=settings.ENDPOINT,
     )
 
