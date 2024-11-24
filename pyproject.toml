@@ -53,7 +53,7 @@ line-length = 90
 
 [tool.ruff.lint.isort]
 split-on-trailing-comma = true
-section-order = ["future", "standard-library", "third-party", "recipes", "first-party", "local-folder"]
+section-order = ["future", "standard-library", "third-party", "recipe", "first-party", "local-folder"]
 
 [tool.ruff.lint.isort.sections]
 "recipe" = ["recipe"]
