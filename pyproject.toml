@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "recipes"
+name = "recipe"
 version = "0.0.0"
 description = ""
 authors = ["Wojciech Richert <33549959+wojtekrichert@users.noreply.github.com>"]
@@ -19,7 +19,7 @@ ruff = "==0.3.5"
 pytest = "==8.1.1"
 
 [tool.poetry.scripts]
-cli = "recipes.cli:main"
+cli = "recipe.cli:main"
 
 [build-system]
 requires = ["poetry>=1.8.2"]
@@ -56,6 +56,6 @@ split-on-trailing-comma = true
 section-order = ["future", "standard-library", "third-party", "recipes", "first-party", "local-folder"]
 
 [tool.ruff.lint.isort.sections]
-"recipes" = ["recipes"]
+"recipe" = ["recipe"]
 
 
