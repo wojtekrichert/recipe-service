@@ -1,7 +1,7 @@
 """Main file that connects all routes & run server."""
 from fastapi import FastAPI
 
-from recipes.routers import recipes_router
+from recipes.routers.recipes.api import recipes_router
 from recipes.settings import settings
 
 
