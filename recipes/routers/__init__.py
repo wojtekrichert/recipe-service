@@ -2,4 +2,4 @@
 
 from fastapi import APIRouter
 
-recipe_router = APIRouter()
+recipes_router = APIRouter()

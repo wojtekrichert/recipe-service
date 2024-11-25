@@ -1,8 +1,8 @@
 """Main file that connects all routes & run server."""
 from fastapi import FastAPI
 
-from recipe.routers import recipe_router
-from recipe.settings import settings
+from recipes.routers import recipes_router
+from recipes.settings import settings
 
 
 def register_routers(rest_app: FastAPI):
@@ -13,7 +13,7 @@ def register_routers(rest_app: FastAPI):
     """
 
     rest_app.include_router(
-        recipe_router,
+        recipes_router,
         prefix=settings.ENDPOINT,
     )
 
